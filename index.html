@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                // Redirect to Play Store
+                window.location.href = "https://play.google.com/store/search?q=gorkha%20ride&c=apps&hl=en_US";
+            } 
+            else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                // Redirect to Apple App Store
+                window.location.href = "https://apps.apple.com/by/app/gorkha-ride/id6511239046";
+            } 
+            else {
+                // Redirect to website
+                window.location.href = "https://gorkharide.com";
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Redirecting you to the right place...</p>
+</body>
+</html>
